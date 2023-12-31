@@ -9,7 +9,7 @@ To run these Java programs, make sure you have the following prerequisites insta
 + Java Development Kit (JDK): Download JDK
 + Integrated Development Environment (IDE) such as Eclipse, IntelliJ, or Visual Studio Code: Choose the one you are most comfortable with.
 + Clone this repository to your local machine using the following command:
-  git clone https://github.com/your-username/java-programs.git
+  "git clone https://github.com/mindblogger786/java-programs.git"
 Open your preferred IDE, import the project, and explore the various programs.
 
 ## Program List

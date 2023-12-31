@@ -1,0 +1,12 @@
+public class SumOfFirstAndLastDigit {
+    public static void main(String[ ] args) {
+        int number = 12345;
+        int lastDigit = number % 10;
+        int firstDigit = number;
+        while (firstDigit >= 10) {
+            firstDigit /= 10;
+        }
+        int sum = firstDigit + lastDigit;
+        System.out.println("The sum of the first and last digits is: " + sum);
+    }
+}

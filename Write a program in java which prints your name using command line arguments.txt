@@ -1,0 +1,11 @@
+class PrintName {
+    public static void main(String[ ] args) {
+        if (args.length == 1) {
+        String name = args[0];
+        System.out.println("My name is: " + name);
+        }
+        else {
+        System.out.println("Please provide your name as a command line argument.");
+        }
+    }
+}

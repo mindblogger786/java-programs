@@ -1,0 +1,44 @@
+class Parent {
+    final int finalVar = 10; // A final variable
+    final void finalMethod() {
+        System.out.println("This is a final method in the Parent class.");
+    }
+}
+class Child extends Parent {
+    // Uncommenting this will result in a compilation error
+    // void finalMethod() {
+    // System.out.println("This is an overridden method in the Child class.");
+    // }
+}
+class Animal {
+    String species;
+    Animal(String species) {
+        this.species = species;
+    }
+    void makeSound() {
+        System.out.println("Animal makes a sound.");
+    }
+}
+class Dog extends Animal {
+    String breed;
+    Dog(String species, String breed) {
+        super(species);
+        this.breed = breed;
+    }
+    @Override
+    void makeSound() {
+        System.out.println("Dog barks.");
+    }
+}
+public class Main {
+    public static void main(String[] args) {
+        Parent parent = new Parent();
+        System.out.println("Final Variable: " + parent.finalVar);
+        parent.finalMethod();
+        Child child = new Child();
+        Dog myDog = new Dog("Canine", "Labrador");
+        System.out.println("Species: " + myDog.species);
+        System.out.println("Breed: " + myDog.breed);
+        myDog.makeSound();
+    }
+}

@@ -1,0 +1,25 @@
+import java.io.DataInputStream;
+import java.io.IOException;
+public class EvenOddChecker {
+    public static void main(String[ ] args) {
+        DataInputStream dis = new DataInputStream(System.in);
+        try {
+            System.out.print("Enter a number: ");
+            int number = Integer.parseInt(dis.readLine());
+            if (number % 2 == 0) {
+                System.out.println(number + " is an even number.");
+            } else {
+                System.out.println(number + " is an odd number.");
+            }
+        } catch (IOException | NumberFormatException e) {
+            System.err.println("Error: Invalid input. Please enter a valid integer.");
+        }
+        finally {
+            try {
+                dis.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+}

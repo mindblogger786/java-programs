@@ -1,0 +1,21 @@
+class CustomException extends Exception {
+    public CustomException(String message) {
+        super(message);
+    }
+}
+public class UserDefinedExceptionDemo {
+    public static void main(String[ ] args) {
+        try {
+            int age = 15;
+            if (age < 18) {
+                throw new CustomException("You are not allowed to vote because you are under 18.");
+            }
+            else {
+                System.out.println("You are eligible to vote.");
+            }
+        }
+        catch (CustomException e) {
+            System.out.println("Custom Exception: " + e.getMessage());
+        }
+    }
+}
